@@ -46,6 +46,8 @@ and `nc`), so our own client is not used. It checks 200, 404, 403, 400, a big fi
 requests on one connection, a cut-off payload, an unknown frame type, a wrong magic, a wrong version and a huge
 length. It needs `nc` and `xxd`.
 
+Tested against Prateek's client ([tek-wizard/NetworkAssignment](https://github.com/tek-wizard/NetworkAssignment)), all tests pass.
+
 ## Screenshots
 
 Build and tests (18 checks pass):
@@ -62,4 +64,4 @@ This is the server for BHTTP-B. It was written by Raghavendra. Prateek wrote the
 we share is SPEC.md.
 
 - server (this repo, Raghavendra): https://github.com/Raghavendra1729-cell/CPP_SERVER
-- client (Prateek): https://github.com/<prateek-github-username>/bhttp-b-client
+- client (Prateek): https://github.com/tek-wizard/NetworkAssignment
