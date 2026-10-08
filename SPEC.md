@@ -136,3 +136,12 @@ An error uses the normal RESPONSE and BODY, the body is a short text like `404 N
 ## 9. Example
 
 `HEXDUMP.md` has a full request and response with every byte explained.
+
+## 10. Future Work (Version 2)
+
+Future revisions of BHTTP-B (`Version = 2`) could introduce:
+- **Chunked Body Streaming:** Permitting multiple `BODY` frames without requiring the full length upfront, marking only the terminal frame with `LAST (0x01)`.
+- **Stream Multiplexing:** Introducing a 31-bit stream identifier field into the frame header to enable interleaved requests and responses concurrently over a single TCP connection.
+- **Dynamic Header Compression:** Augmenting the static table with an indexed dynamic dictionary (similar to HPACK) for repeated header values across requests.
+- **Additional HTTP Methods:** Supporting `POST`, `PUT`, and `HEAD` methods (e.g., method IDs 2, 3, 4).
+- **Server Push:** Allowing the server to proactively send cacheable assets before explicit client requests.
